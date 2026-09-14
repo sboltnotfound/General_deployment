@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">HACKATHON ML</p>
+            <h1 id="title">Prediction Engine</h1>
+            <p id="subtitle">Enter the required values and run the model.</p>
+        </section>
+
+        <section class="card">
+            <div id="modelInfo" class="model-info hidden"></div>
+
+            <form id="predictionForm">
+                <div id="fields" class="fields">
+                    <div class="loading">Loading model configuration...</div>
+                </div>
+
+                <button id="predictButton" type="submit">
+                    <span id="buttonText">Predict</span>
+                    <span id="spinner" class="spinner hidden"></span>
+                </button>
+            </form>
+
+            <div id="error" class="message error hidden"></div>
+
+            <div id="result" class="result hidden">
+                <p class="result-label">Prediction</p>
+                <div id="predictionValue" class="prediction-value"></div>
+                <p id="targetLabel" class="target-label"></p>
+                <div id="probabilities" class="probabilities hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
